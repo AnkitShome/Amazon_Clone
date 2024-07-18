@@ -1,13 +1,13 @@
-import { products } from "./data/box.js";
+import { products as prods} from "./data/box.js";
 
 let box1HTML='';
-console.log(products);
+console.log(prods);
 
 for(let i=0;i<4;i++){
    box1HTML+=`
    <div class="box-col">
-      <h3>${products[i].name}</h3>
-      <img src=${products[i].image} alt="">
+      <h3>${prods[i].name}</h3>
+      <img src=${prods[i].image} alt="">
       <a href="/">Shop More</a>
    </div>
    `;
@@ -17,8 +17,8 @@ let box2HTML='';
 for(let i=4;i<8;i++){
    box2HTML+=`
    <div class="box-col">
-      <h3>${products[i].name}</h3>
-      <img src=${products[i].image} alt="">
+      <h3>${prods[i].name}</h3>
+      <img src=${prods[i].image} alt="">
       <a href="/">Shop More</a>
    </div>
    `;
