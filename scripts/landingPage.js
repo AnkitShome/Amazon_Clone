@@ -8,7 +8,7 @@ for(let i=0;i<4;i++){
    <div class="box-col">
       <h3>${prods[i].name}</h3>
       <img src=${prods[i].image} alt="">
-      <a href="/">Shop More</a>
+      <a href="index.html">Shop More</a>
    </div>
    `;
 }
@@ -19,7 +19,7 @@ for(let i=4;i<8;i++){
    <div class="box-col">
       <h3>${prods[i].name}</h3>
       <img src=${prods[i].image} alt="">
-      <a href="/">Shop More</a>
+      <a href="index.html">Shop More</a>
    </div>
    `;
 }
