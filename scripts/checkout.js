@@ -35,7 +35,10 @@ cart.forEach((cartItem) => {
    });
 
    const today=dayjs();
-   const deliveryDate=today.add(deliveryOption.deliveryDays,'days');
+   const deliveryDate=today.add(
+      deliveryOption.deliveryDays,
+      'days'
+   );
    const dateString=deliveryDate.format('dddd, MMMM D');
 
    cartSummaryHTML += `
@@ -87,7 +90,10 @@ function deliveryOptionsHTML(matchingProduct,cartItem){
    deliveryOptions.forEach((deliveryOption)=>{
 
       const today=dayjs();
-      const deliveryDate=today.add(deliveryOption.deliveryDays,'days');
+      const deliveryDate=today.add(
+         deliveryOption.deliveryDays,
+         'days'
+      );
       const dateString=deliveryDate.format('dddd, MMMM D');
       
       const priceString=deliveryOption.priceCents
@@ -97,12 +103,16 @@ function deliveryOptionsHTML(matchingProduct,cartItem){
       
 
       const isChecked=deliveryOption.id===cartItem.deliveryOptionId;
+      // console.log(deliveryOption.id);
+      // console.log('next');
+      // console.log(cartItem.deliveryOptionId);
+      // console.log('line');
 
       html+=
       `
          <div class="delivery-option">
             <input type="radio"
-               ${isChecked? 'checked':''}
+               ${isChecked ? 'checked':''}
               class="delivery-option-input"
               name="delivery-option-${matchingProduct.id}">
             <div>
